@@ -1,0 +1,359 @@
+* {
+    box-sizing: border-box;
+    font-family: Helvetica Neue, Open Sans, Arial;
+ }
+ 
+ section.home {
+    display: flex;
+    flex-direction: column;
+    min-width: 320px;
+ 
+    div.intro {
+       display: flex;
+       flex-direction: column;
+       justify-content: space-between;
+       width: 100%;
+       padding: 30px;
+       height: 100%;
+ 
+       div.links {
+          a {
+             text-decoration: none;
+             font-weight: bold;
+             color: black;
+          }
+       }
+ 
+       div.blurb {
+          margin-top: 90px;
+ 
+          h1 {
+          }
+ 
+          p {
+             font-size: 16px;
+             line-height: 1.4;
+          }
+       }
+    }
+ 
+    div.grid {
+       display: grid;
+       grid-gap: 3px;
+       padding: 0 0 3px 0;
+       grid-template-rows: 1fr;
+       grid-template-columns: 1fr;
+ 
+       div.tile {
+          height: 360px;
+          background-color: rgba(0, 0, 0, 0.4);
+          overflow: hidden;
+          position: relative;
+       }
+ 
+       div.tile-hover {
+       }
+ 
+       div.bg-img {
+          height: 100%;
+          width: 100%;
+          background-position: center;
+          background-size: cover;
+          transition: all 0.33s ease;
+          // filter: grayscale(1);
+          // opacity: 1;
+ 
+          a {
+             display: none;
+             font-size: 16px;
+             color: #ffffff;
+             text-align: center;
+             margin: auto;
+             position: absolute;
+             top: 0;
+             left: 0;
+             bottom: 0;
+             right: 0;
+             height: 10%;
+             width: 100%;
+             cursor: pointer;
+             text-decoration: none;
+             max-width: 240px;
+             line-height: 1.4;
+          }
+       }
+ 
+       div.bg-img::before {
+          content: "";
+          // display: none;
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-color: rgba(0, 0, 0, 0);
+          transition: all 0.33s ease;
+       }
+ 
+       .tile-hover:hover .bg-img,
+       .tile-hover:focus .bg-img {
+          transform: scale(1.2);
+          // filter: grayscale(0);
+          // opacity: 1;
+       }
+ 
+       .tile-hover:hover .bg-img:before,
+       .tile-holver:focus .bg-img:before {
+          display: block;
+          background-color: rgba(0, 0, 0, 0.5);
+       }
+ 
+       .tile-hover:hover a,
+       .tile-hover:focus a {
+          display: block;
+       }
+ 
+       div.tile-text {
+          background-color: white;
+          display: flex;
+          height: 100%;
+          width: 100%;
+          align-items: center;
+          justify-content: center;
+ 
+          p {
+             margin: 0;
+             font-size: 24px;
+             font-weight: 700;
+          }
+       }
+ 
+       div.bg-img-1 {
+          background-image: url(/images/Desktop\ Wallpaper\ Tower.jpg);
+       }
+ 
+       div.bg-img-2 {
+        background-image: url(/images/ksu2.jpg);
+       }
+ 
+       div.bg-img-3 {
+          background-image: url(https://res.cloudinary.com/antoniolee/image/upload/v1584302917/work-gcoe_tqsmi1.png);
+       }
+ 
+       div.bg-img-4 {
+          background-image: url(https://res.cloudinary.com/antoniolee/image/upload/v1584302917/work-xilinx_nx34h3.png);
+       }
+ 
+       div.bg-img-5 {
+          // background-image: url(https://res.cloudinary.com/antoniolee/image/upload/v1584303111/portrait-animation-3_o9lnyh.gif);
+       }
+ 
+       div.bg-img-6 {
+          background-image: url(https://res.cloudinary.com/antoniolee/image/upload/v1584313884/work-gset_awggna.png);
+       }
+ 
+       div.bg-img-7 {
+          background-image: url(https://media.giphy.com/media/n4TTC9X0sRMVq/giphy.gif);
+       }
+ 
+       div.bg-img-8 {
+          background-image: url(https://res.cloudinary.com/antoniolee/image/upload/v1584313998/work-activision_hhqmmj.png);
+       }
+ 
+       div.bg-img-9 {
+          background-image: url(https://res.cloudinary.com/antoniolee/image/upload/v1584313882/work-xd-bio_vkg8gb.png);
+       }
+ 
+       div.bg-img-10 {
+          background-image: url(https://res.cloudinary.com/antoniolee/image/upload/v1584314357/tile-antonio_zyseo3.png);
+       }
+ 
+       div.bg-img-11 {
+          background-image: url(https://res.cloudinary.com/antoniolee/image/upload/v1584303111/portrait-animation-3_o9lnyh.gif);
+       }
+ 
+       div.bg-img-12 {
+          background-image: url(https://res.cloudinary.com/antoniolee/image/upload/v1584314598/tile-zelda_vz91a3.png);
+       }
+ 
+       div.bg-img-13 {
+          // background-image: url(https://source.unsplash.com/720x480/?sunset,mountains,clouds);
+          background-image: url(https://res.cloudinary.com/antoniolee/image/upload/v1584339607/tile-sunset_zzmr5o.png);
+       }
+ 
+       div.bg-img-14 {
+          background-image: url(https://res.cloudinary.com/antoniolee/image/upload/v1584303111/portrait-animation-3_o9lnyh.gif);
+          background-color: #e6b4e3;
+       }
+ 
+       div.bg-img-15 {
+       }
+    }
+ 
+    //    @media screen and (max-width: 1920px) {
+    //       div.grid {
+    //          div.tile {
+    //             height: 360px;
+    //          }
+    //       }
+    //    }
+ 
+    @media screen and (min-width: 700px) {
+       div.intro {
+          position: fixed;
+          padding: 60px;
+          width: 50%;
+       }
+ 
+       div.grid {
+          width: 50%;
+          margin-left: 50%;
+ 
+          div.tile {
+          }
+       }
+    }
+ 
+    @media screen and (min-width: 1200px) {
+       div.intro {
+          width: 33.3333%;
+       }
+ 
+       div.grid {
+          width: 66.6666%;
+          margin-left: 33.3333%;
+          grid-template-rows: 1fr 1fr;
+          grid-template-columns: 1fr 1fr;
+ 
+          div.tile {
+          }
+       }
+    }
+ 
+    @media screen and (min-width: 1440px) {
+       div.grid {
+          grid-template-rows: 1fr 1fr 1fr;
+          grid-template-columns: 1fr 1fr 1fr;
+ 
+          div.tile {
+          }
+       }
+    }
+ 
+    @media screen and (min-width: 1920px) {
+       div.intro {
+          padding: 90px;
+       }
+ 
+       div.grid {
+          div.tile {
+             height: 440px;
+          }
+       }
+    }
+ }
+ 
+ section#footer {
+    -webkit-font-smoothing: antialiased;
+    background-color: black;
+    color: white;
+    padding: 60px;
+ 
+    div.container {
+       max-width: 1440px;
+       display: flex;
+       flex-direction: column;
+       margin: 0 auto;
+    }
+ 
+    h4 {
+       font-size: 16px;
+       text-transform: uppercase;
+       letter-spacing: 2px;
+       margin: 0;
+    }
+ 
+    div.blurb {
+       margin-bottom: 60px;
+ 
+       h4 {
+          color: #ff8fb8;
+       }
+ 
+       h1 {
+          margin: 15px 0 20px;
+       }
+ 
+       p {
+          text-transform: uppercase;
+          font-size: 12px;
+          margin: 0;
+       }
+    }
+ 
+    div.explore {
+       display: flex;
+ 
+       h4 {
+          color: #4a90e2;
+          margin-bottom: 20px;
+       }
+ 
+       ul {
+          margin: 0;
+          padding: 0;
+ 
+          li {
+             list-style: none;
+             margin-top: 10px;
+ 
+             a {
+                &:hover {
+                   opacity: 1;
+                }
+ 
+                opacity: 0.75;
+                text-transform: uppercase;
+                color: white;
+                text-decoration: none;
+                font-size: 12px;
+             }
+          }
+       }
+ 
+       div.nav {
+          margin-right: 80px;
+       }
+ 
+       div.social {
+          ul {
+             li {
+                margin: 0 0 22px;
+                font-size: 16px;
+ 
+                a {
+                   font-size: 16px;
+                }
+             }
+          }
+       }
+    }
+ 
+    @media screen and (min-width: 700px) {
+       padding: 60px;
+ 
+       div.container {
+          flex-direction: row;
+          justify-content: space-between;
+       }
+ 
+       div.blurb {
+          margin: 0 60px 0 0;
+       }
+    }
+ 
+    @media screen and (min-width: 1200px) {
+       padding: 90px 120px;
+    }
+ }
+ 
